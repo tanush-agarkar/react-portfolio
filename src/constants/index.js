@@ -83,7 +83,7 @@ export const PROJECTS = [
   },
   {
     title: "Home Rental Application",
-    link: "https://github.com/tanush-agarkar/Home-Rental-Application",
+    link: "https://youtu.be/G_07yZrBUhU",
     image: project1,
     description: [
       "Developed a scalable property rental platform using the MERN stack (MongoDB, Express.js, React.js, Node.js), offering landlords the ability to list properties with detailed descriptions, images, and terms, while enabling tenants to search, filter, request viewings, and schedule appointments, significantly streamlining the entire rental process.",
