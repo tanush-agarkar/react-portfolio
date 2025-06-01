@@ -1,25 +1,22 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 
 const Project = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 ">
+    <div className="border-b border-neutral-900 pb-4">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl "
+        className="my-20 text-center text-4xl"
       >
         Project
       </motion.h2>
 
       <div>
         {PROJECTS.map((project, ind) => (
-          <div
-            key={ind}
-            className="mb-8 flex flex-wrap lg:justify-center
-        "
-          >
+          <div key={ind} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
@@ -34,14 +31,50 @@ const Project = () => {
                 className="mb-6 rounded"
               />
             </motion.div>
+
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">  <a href={project.link}>{project.title}</a></h6>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 1 }}
+                className="w-full max-w-xl lg:w-3/4 flex items-center mb-3"
+              >
+                {/* Project title lowercase */}
+                <h6 className="font-bold text-xl text-purple-700  tracking-wide hover:text-purple-900 transition-colors duration-300 ">
+                  {project.title}
+                </h6>
+
+                {/* External link icon */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-purple-700 hover:text-purple-900 transition-colors duration-300"
+                  aria-label={`Visit ${project.title} project link`}
+                >
+                  <FiExternalLink size={20} />
+                </a>
+              </motion.div>
+
+              {/* Description */}
+              <ul className="mb-4 text-neutral-400 list-disc list-inside">
+                {Array.isArray(project.description) ? (
+                  project.description.map((point, index) => (
+                    <li key={index} className="mb-2">
+                      {point}
+                    </li>
+                  ))
+                ) : (
+                  <li>{project.description}</li>
+                )}
+              </ul>
+
+              {/* Technologies */}
               {project.technologies.map((tech, ind) => (
                 <span
                   key={ind}

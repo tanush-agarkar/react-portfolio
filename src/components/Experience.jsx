@@ -30,13 +30,17 @@ const Experience = () => {
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">
-                {exp.role} -{" "}
-                <span className="text-sm text-purple-100">{exp.company}</span>
+              <h6 className="mb-2 text-lg font-bold text-purple-700">
+                {exp.role}{" "}
+                <span className="ml-2 text-base italic font-semibold text-purple-500 tracking-wide">
+                  @{exp.company}
+                </span>
               </h6>
 
               {exp.description.map((des, ind) => (
-                <p key={ind} className="mb-4 text-neutral-400">{des}</p>
+                <p key={ind} className="mb-4 text-neutral-400">
+                  {des}
+                </p>
               ))}
 
               {exp.technologies.map((tech, ind) => (
