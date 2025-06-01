@@ -55,8 +55,15 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Job Portal Application",
+    link: "https://github.com/tanush-agarkar/Home-Rental-Application",
+    image: project2,
+    description: `This project showcases my ability to build a scalable, full-stack application with a strong focus on both user experience and technical efficiency. The job portal is built to be flexible and scalable, meeting the needs of both job seekers and employers, and offers an end-to-end solution for managing the job search process.`,
+    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+  },
+  {
     title: "Home Rental Application",
-    link:"https://github.com/tanush-agarkar/Home-Rental-Application",
+    link: "https://github.com/tanush-agarkar/Home-Rental-Application",
     image: project1,
     description: `It is a user-friendly platform designed to streamline the process of renting residential properties. 
       Whether you’re a landlord looking to list your properties or a tenant searching for the perfect place to call
@@ -64,35 +71,10 @@ export const PROJECTS = [
       `,
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
-  {
-    title: "Task Management App",
-    link:"https://github.com/tanush-agarkar/task-manager-api",
-    image: project2,
-    description: `Project on managing task of the user build this app with best programming practices like using MVC
-      Framework, integrated sending email services, used mongo dB database, pagination and sorting and
-      Cryptography to make user secure .
-      Module Consists of 4-5 different types of users with different functionalities`,
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing brif introduction projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Chatting Application",
-    link:"https://github.com/tanush-agarkar/Chat-app",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
 ];
 
 export const CONTACT = {
-  address: "401 samyak appt, near YCCE college, Nagpur",
-  phoneNo: "+91 8010 4472 85 ",
+  address: "Nagpur, Maharashtra",
+  phoneNo: "+91 - 8010447285 ",
   email: "tanushpagarkar@gmail.com",
 };
